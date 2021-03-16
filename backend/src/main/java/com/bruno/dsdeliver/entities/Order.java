@@ -1,6 +1,8 @@
 package com.bruno.dsdeliver.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.time.Clock;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
@@ -48,8 +50,8 @@ public class Order implements Serializable {
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
-		this.moment = moment;
-		this.status = status;
+		this.moment = Instant.now();
+		this.status = OrderStatus.PENDING;
 	}
 
 	public Long getId() {
