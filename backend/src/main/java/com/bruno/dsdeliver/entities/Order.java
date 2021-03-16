@@ -50,8 +50,8 @@ public class Order implements Serializable {
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
-		this.moment = Instant.now();
-		this.status = OrderStatus.PENDING;
+		this.moment = moment;
+		this.status = status;
 	}
 
 	public Long getId() {
